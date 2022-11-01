@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from '../img/Logo.png';
 import HamMenuButton from './HamMenuButton';
+import {Link} from 'react-router-dom'
 
-function Nav () {
+function Nav() {
     return (
         <nav className='flex container mx-auto p-4 font-medium'>
             <div className='flex items-center justify-between'>
@@ -12,15 +13,15 @@ function Nav () {
                 </div>
                 {/* Nav Menu container*/}
                 <div className='hidden md:flex space-x-6'>
-                    <a href='#'className='hover:text-darkGrayishBlue'>Home</a>
-                    <a href='#'className='hover:text-darkGrayishBlue'>About us</a>
-                    <a href='#'className='hover:text-darkGrayishBlue'>Pricing</a>
-                    <a href='#'className='hover:text-darkGrayishBlue'>Contact Us</a>
+                    <Link to='/mblog' className='hover:text-darkGrayishBlue'>Home</Link>
+                    <Link to='#' className='hover:text-darkGrayishBlue'>About Us</Link>
+                    <Link to='/pricing' className='hover:text-darkGrayishBlue'>Pricing</Link>
+                    <Link to='/contacts' className='hover:text-darkGrayishBlue'>Contact Us</Link>
                 </div>
                 {/* Button */}
-                <a href='#' className='hidden md:block p-3 px-6 text-white rounded-full align-baseline bg-brightRed hover:bg-brightRedLight'>
+                <Link to='#' className='hidden md:block p-3 px-6 text-white rounded-full align-baseline bg-brightRed hover:bg-brightRedLight'>
                     Get Started
-                </a>
+                </Link>
                 {/* Hamburger Icon */}
                 <div>
                     <HamMenuButton />
